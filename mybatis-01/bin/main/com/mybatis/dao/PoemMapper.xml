@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qwe">
+  
+  <select id="findAllPoems" resultType="com.mybatis.pojo.Poem">
+  	select * from poem
+  </select>
+  
+  <select id="findPoemByTitle" parameterType="java.lang.String" resultType="com.mybatis.pojo.Poem">
+  	select * from poem where title = #{title}
+  	
+  </select>
+  
+  <insert id="insertPoem" parameterType="com.mybatis.pojo.Poem" >
+  	insert into poem (title,content) values (#{title},#{content})
+  </insert>
+  
+  <update id="updatePoemByTitle" parameterType="com.mybatis.pojo.Poem">
+  	update poem set content = #{content} where title = #{title}
+  </update>
+  
+  <delete id="deletePoemByTitle" parameterType="java.lang.String">
+  	delete from poem where title = #{title}
+  </delete>
+  
+  
+  
+  
+</mapper>
