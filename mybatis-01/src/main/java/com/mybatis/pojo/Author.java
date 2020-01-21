@@ -1,12 +1,22 @@
 package com.mybatis.pojo;
 
-import java.sql.Date;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Setter
+@Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Author {
 
+	private int id;
     private String name;
     private String dynasty;
-    private Date birth;
+    private String birth;
     private String briefDescription;
 
 

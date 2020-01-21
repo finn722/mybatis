@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-import javax.naming.InitialContext;
-
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -15,7 +13,7 @@ import org.junit.Test;
 
 import com.mybatis.pojo.Poem;
 
-public class ServiceTest {
+public class PoemServiceTest {
 	
 	private SqlSessionFactory sqlSessionFactory;
 	
